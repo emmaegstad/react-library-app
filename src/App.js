@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import BookList from './views/Books/BookList';
 import BookDetail from './views/Books/BookDetail';
 import './App.css';
