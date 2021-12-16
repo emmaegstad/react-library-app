@@ -1,4 +1,6 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import BookList from './views/Books/BookList';
+import BookDetail from './views/Books/BookDetail';
 import './App.css';
 
 function App() {
@@ -6,7 +8,14 @@ function App() {
   return (
     <main className="container">
       <h1>Library Catalog</h1>
-      <BookList />
+
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/books/:id" component={BookDetail} />
+          <Route exact path="/books" component={BookList} />
+          <Route exact path="/" component={BookList} />
+        </Switch>
+      </BrowserRouter>
     </main>
   );
 }
